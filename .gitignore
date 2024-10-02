@@ -12,7 +12,7 @@
 ### jp-workdir ###
 
 # private workdir
-./jupiter-notebook/workdir/*
+./jupiter-notebook/code/*
 
 # checkpoints
 */.ipynb_checkpoints
