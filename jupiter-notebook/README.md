@@ -1,4 +1,4 @@
-# Qiskit Development Environment with Docker
+# Qiskit Development Environment with Jupyter Notebook on Docker
 
 This project sets up a Qiskit development environment using [Jupyter Notebook](https://jupyter.org) on Docker. The container is based on jupyter/minimal-notebook image, and, has Qiskit and some useful packages (check `requirements.txt`), allowing you to develop quantum programs locally and execute them inside the container.
 
@@ -28,16 +28,15 @@ cd jupiter-notebook
 mkdir workdir
 ```
 
-> Note that the `workdir` folder will be mounted inside the container, and it will be used to store the notebooks.
-
+> Note that the `workdir` folder will be mounted inside the container and used to store the notebooks.
 
 ### 2. Setup group ownership
 
-Usually the user and group of the host and the container are different. To avoid permission issues, you can change the group ownership of the shared folders to the docker group.
+Usually, the user and group of the host and the container are different. To avoid permission issues, you can change the group ownership of the shared folders to the docker group.
 
 ```bash
-chown -R :docker $example_dir $workdir_dir
-chmod -R 774 $example_dir $workdir_dir
+chown -R :docker $example_dir <example-directory>
+chmod -R 774 $example_dir <working-directory>
 ```
 
 ### 3. Build the Docker container
@@ -62,32 +61,37 @@ docker-compose up -d
 
 ### 5. Stop and remove the container
 
-To stop container, use the following command:
+When you're done, you can stop the running container with:
+
+```bash
+docker-compose stop
+```
+
+To completely remove the container (but keep the image), you can run:
 
 ```bash
 docker-compose down
 ```
 
-> This will stop and remove the container as well as the associated network. All notebooks and data won't be lost because they are stored in the shared folder (`wordir`).
+> This will stop and remove the container and the associated network. All notebooks and data won't be lost because they are stored in the shared folder (`wordir`).
 
 ## Usage
 
-To use installed environment, you can access to the Jupiter Notebook server by opening the following URL in your web browse:
+To use the installed environment, you can access the Jupiter Notebook server by opening the following URL in your web browser:
+
 ```
 http://localhost:8888
 ```
 
-
 ### VScode integration
 
-If you are using VScode, you can install the [Jupiter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) to edit `.ipynb` files, without interact with the web browser interface.
+If you are using VScode, you can install the [Jupiter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) to edit `.ipynb` files, without interacting with the web browser interface.
 
 > Execution of notebooks must be done using the web browser interface.
 
-
 ## Examples
 
-Within the `examples` folder, you can find some examples of quantum programs that can be executed using the Jupyter Notebook interface.
+Within the `examples` folder, you can find examples of quantum programs that can be executed using the Jupyter Notebook interface.
 
-An example of a quantum program in jupiter notebook is the following:
+An example of a quantum program in Jupiter notebook is the following:
 ![hello_qiskit image](docs/hello_qiskit.png)
