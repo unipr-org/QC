@@ -1,0 +1,8 @@
+version: '3'
+services:
+  qiskit-dev:
+    build: .
+    container_name: qiskit-container
+    volumes:
+      - ./code:/usr/src/app/code
+    tty: true
