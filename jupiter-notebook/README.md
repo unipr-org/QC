@@ -25,18 +25,18 @@ git clone git@github.com:unipr-org/QC.git
 
 ```bash
 cd jupiter-notebook
-mkdir workdir
+mkdir code
 ```
 
-> Note that the `workdir` folder will be mounted inside the container and used to store the notebooks.
+> Note that the `code` folder will be mounted inside the container and used to store the notebooks.
 
 ### 2. Setup group ownership
 
 Usually, the user and group of the host and the container are different. To avoid permission issues, you can change the group ownership of the shared folders to the docker group.
 
 ```bash
-chown -R :docker $example_dir <example-directory>
-chmod -R 774 $example_dir <working-directory>
+chown -R :docker <example-directory>
+chmod -R 774 <working-directory>
 ```
 
 ### 3. Build the Docker container
@@ -73,7 +73,7 @@ To completely remove the container (but keep the image), you can run:
 docker-compose down
 ```
 
-> This will stop and remove the container and the associated network. All notebooks and data won't be lost because they are stored in the shared folder (`wordir`).
+> This will stop and remove the container and the associated network. All notebooks and data won't be lost because they are stored in the shared folder (`code`).
 
 ## Usage
 

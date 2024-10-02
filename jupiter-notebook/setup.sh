@@ -1,18 +1,18 @@
 #!/bin/bash
 
 example_dir="examples"
-workdir_dir="workdir"
+workdir_dir="code"
 
 
 if [ ! -d "$example_dir" ]; then
-    echo "Creating 'example' directory..."
+    echo "Creating '$example_dir' directory..."
     mkdir $example_dir
 else
     echo "'$example_dir' directory already exists."
 fi
 
 if [ ! -d "$workdir_dir" ]; then
-    echo "Creating 'workdir' directory..."
+    echo "Creating '$workdir_dir' directory..."
     mkdir $workdir_dir
 else
     echo "'$workdir_dir' directory already exists."
