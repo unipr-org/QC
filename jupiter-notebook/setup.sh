@@ -24,4 +24,4 @@ chown -R :docker $example_dir $workdir_dir
 chmod -R 774 $example_dir $workdir_dir
 
 echo "Building and preparing Docker containers..."
-docker-compose up --build --no-start --no-cache
+docker-compose up --build --no-start
