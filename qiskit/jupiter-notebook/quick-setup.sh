@@ -20,7 +20,6 @@ fi
 
 echo "Setting permissions for 'example' and 'workdir'..."
 
-chown -R :docker $EXAMPLE_DIR $WORKING_DIR
 chmod -R 774 $EXAMPLE_DIR $WORKING_DIR
 
 echo "Building and preparing Docker containers..."
