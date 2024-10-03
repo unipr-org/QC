@@ -1,0 +1,21 @@
+### VSCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*/.vscode
+
+
+
+### jp-workdir ###
+
+# private workdir
+./jupiter-notebook/code/*
+
+# checkpoints
+*/.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.ipynb_checkpoints
+.ipynb_checkpoints/*

@@ -1,0 +1,8 @@
+qiskit
+qiskit-ibm-runtime
+qiskit-algorithms
+pylatexenc
+numpy
+pandas
+matplotlib
+seaborn
