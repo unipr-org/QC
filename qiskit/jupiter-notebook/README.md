@@ -77,7 +77,7 @@ http://localhost:8888
 ### VScode integration
 If you are using VScode, you can install the [Jupiter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) to edit `.ipynb` files, without interacting with the web browser interface.
 
-> Execution of notebooks must be done using the web browser interface.
+Then, you can change the Jupiter kernel setting `localhost:8888` as the new one. This allows you to execute the Jupiter file locally.
 
 ## Examples
 Within the `examples/` folder, you can find examples of quantum programs that can be executed using the Jupyter Notebook interface.
