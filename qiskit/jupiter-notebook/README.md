@@ -29,7 +29,6 @@ mkdir code
 Usually, the user and group of the host and the container are different. To avoid permission issues, you can change the group ownership of the shared folders to the docker group.
 
 ```bash
-chown -R :docker <example-directory> <working-directory>
 chmod -R 774 <example-directory> <working-directory>
 ```
 

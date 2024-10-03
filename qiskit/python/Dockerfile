@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     bash \
     coreutils \
     poppler-utils \
+    git \
     && apt-get clean
 
 # Install Qiskit
