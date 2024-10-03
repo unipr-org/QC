@@ -1,27 +1,27 @@
 #!/bin/bash
 
-example_dir="examples"
-workdir_dir="code"
+EXAMPLE_DIR="examples"
+WORKING_DIR="code"
 
 
-if [ ! -d "$example_dir" ]; then
-    echo "Creating '$example_dir' directory..."
-    mkdir $example_dir
+if [ ! -d "$EXAMPLE_DIR" ]; then
+    echo "Creating '$EXAMPLE_DIR' directory..."
+    mkdir $EXAMPLE_DIR
 else
-    echo "'$example_dir' directory already exists."
+    echo "'$EXAMPLE_DIR' directory already exists."
 fi
 
-if [ ! -d "$workdir_dir" ]; then
-    echo "Creating '$workdir_dir' directory..."
-    mkdir $workdir_dir
+if [ ! -d "$WORKING_DIR" ]; then
+    echo "Creating '$WORKING_DIR' directory..."
+    mkdir $WORKING_DIR
 else
-    echo "'$workdir_dir' directory already exists."
+    echo "'$WORKING_DIR' directory already exists."
 fi
 
 echo "Setting permissions for 'example' and 'workdir'..."
 
-chown -R :docker $example_dir $workdir_dir
-chmod -R 774 $example_dir $workdir_dir
+chown -R :docker $EXAMPLE_DIR $WORKING_DIR
+chmod -R 774 $EXAMPLE_DIR $WORKING_DIR
 
 echo "Building and preparing Docker containers..."
 docker-compose up --build --no-start

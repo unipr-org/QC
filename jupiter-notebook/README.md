@@ -35,16 +35,18 @@ mkdir code
 Usually, the user and group of the host and the container are different. To avoid permission issues, you can change the group ownership of the shared folders to the docker group.
 
 ```bash
-chown -R :docker <example-directory>
-chmod -R 774 <working-directory>
+chown -R :docker <example-directory> <working-directory>
+chmod -R 774 <example-directory> <working-directory>
 ```
+
+> `<example-directory>` and `<working-directory>`, are setted by default as `examples/` and `code/`, respectively. 
 
 ### 3. Build the Docker container
 
 To build the Docker image and set up the container without running it immediately, use the following command:
 
 ```bash
-docker-compose up --build --no-start --no-cache
+docker-compose up --build --no-start
 ```
 
 > This command will create the container but will **not** start it automatically.

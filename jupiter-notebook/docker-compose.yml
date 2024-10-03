@@ -4,7 +4,7 @@ services:
             context: .
             dockerfile: Dockerfile
         volumes:
-            - ./workdir:/home/jovyan/work
+            - ./code:/home/jovyan/code
             - ./examples:/home/jovyan/examples
         ports:
             - 8888:8888
