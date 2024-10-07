@@ -79,6 +79,10 @@ If you are using VScode, you can install the [Jupiter extension](https://marketp
 
 Then, you can change the Jupiter kernel setting `localhost:8888` as the new one. This allows you to execute the Jupiter file locally.
 
+![1st step](./images/1.png)
+![2nd step](./images/2.png)
+![3rd step](./images/3.png)
+
 ## Examples
 Within the `examples/` folder, you can find examples of quantum programs that can be executed using the Jupyter Notebook interface.
 
