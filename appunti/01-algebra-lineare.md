@@ -1,6 +1,6 @@
-## Notazione
+# Notazione
 
-Uno **spazio di HIlbert** $\mathcal{H}$ è uno spazio vettoriale lineare su
+Uno **spazio di Hilbert** $\mathcal{H}$ è uno spazio vettoriale lineare su
 $\mathbb{C}$ dotato di **prodotto interno** e che induce una **norma**. Usiamo
 la **notazione di Dirac** per rappresentare i vettori di tale spazio.
 
@@ -22,7 +22,7 @@ la **notazione di Dirac** per rappresentare i vettori di tale spazio.
   \end{bmatrix}
   $$
 
-### Prodotto interno
+## Prodotto interno
 
 Definiamo il **prodotto interno** come l'applicazione di un bra ad un ket
 (_bra-ket_):
@@ -38,7 +38,7 @@ $$
 \sum_{i}{x_i^* \cdot y_i}
 $$
 
-#### Proprietà
+### Proprietà
 
 Al prodotto interno si associano le seguenti proprietà:
 
@@ -55,4 +55,4 @@ Al prodotto interno si associano le seguenti proprietà:
    ||{x}|| := \sqrt{\braket{x|x}}
    $$
 
-### Prodotto esterno
+## Prodotto esterno
