@@ -19,3 +19,5 @@
 */.ipynb_checkpoints/*
 .ipynb_checkpoints
 .ipynb_checkpoints/*
+
+.prettierrc.json
