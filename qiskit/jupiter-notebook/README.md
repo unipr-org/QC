@@ -14,7 +14,7 @@ For a quick installation you can run the script `bash quick-setup.sh`.
 Firstly, you need to clone this repository:
 
 ```bash
-git clone git@github.com:unipr-org/QC.git
+git clone https://github.com/unipr-org/QC.git
 ```
 
 ### 1. Create required folders
