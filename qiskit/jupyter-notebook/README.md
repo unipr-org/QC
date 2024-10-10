@@ -38,7 +38,7 @@ chmod -R 774 <example-directory> <working-directory>
 To build the Docker image and set up the container without running it immediately, use the following command:
 
 ```bash
-docker-compose up --build --no-start
+docker compose up --build --no-start
 ```
 
 > This command will create the container but will **not** start it automatically.
@@ -47,7 +47,7 @@ docker-compose up --build --no-start
 Once the build is complete, you can start the container using:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 > This command will start the container in the background, and share sessions with the host on port 8888.
@@ -56,13 +56,13 @@ docker-compose up -d
 When you're done, you can stop the running container with:
 
 ```bash
-docker-compose stop
+docker compose stop
 ```
 
 To completely remove the container (but keep the image), you can run:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 > This will stop and remove the container and the associated network. All notebooks and data won't be lost because they are stored in the shared folder (`code/`).
