@@ -7,7 +7,7 @@ Guida directory:
 .
 ├── appunti
 ├── qiskit
-│   ├──jupyter-notebook
+│   ├── jupyter-notebook
 │   └── python
 └── slides
 ```
