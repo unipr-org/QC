@@ -6,7 +6,7 @@ QC - Quantum Computing presso l'Università degli Studi di Parma (6 CFU).
 Guida directory:
 .
 ├── qiskit
-│   ├──yjupiter-notebook
+│   ├──jupyter-notebook
 │   └── python
 └── slides
 ```
