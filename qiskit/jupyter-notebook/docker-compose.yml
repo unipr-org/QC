@@ -1,5 +1,8 @@
 services:
-    jupyter:
+    quantum-jupyter:
+        image: quantum-jupyter
+        hostname: quantum-jupyter
+        container_name: quantum-jupyter
         build:
             context: .
             dockerfile: Dockerfile
@@ -8,5 +11,4 @@ services:
             - ./examples:/home/jovyan/examples
         ports:
             - 8888:8888
-        container_name: jupyter_notebook
         command: "start-notebook.sh --NotebookApp.token="
