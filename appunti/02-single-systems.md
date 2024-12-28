@@ -196,7 +196,7 @@ $$
 Di conseguenza possiamo stabilire che anche l'uguaglianza: $M \, \ket{a} = \ket{f(a)} \; \forall a\in \Sigma$ sia veritiera.
 
 >Dimostriamo:
-> ![[dimostrazione.jpeg | 500]]
+> ![[dimostrazione.jpeg]]
 
 ### bra
 La matrice $M$, includendo la notazione bra, può essere espressa come: 
@@ -242,7 +242,7 @@ Uno stato quantistico di un sistema è rappresentato da un vettore colonna, simi
 Solitamente gli stati quantistici vengono rappresentati tramite $\ket{0}$ o $\ket{1}$, vettori in cui gli indici corrispondono ai classici stati 0 e 1.
 Per riferirci in modo generico a questo tipo di vettori viene utilizzata la notazione: $\ket{\psi}$, per un qualunque vettore $\ket{\psi}$, il suo corrispettivo vettore $\bra{\psi}$ è il vettore colonna trasposto:
 $$
-\bra{\psi} = \ket{\psi}^\top
+\bra{\psi} = \ket{\psi}^\dagger
 $$
 ## Misurazione di uno stato quantistico
 L'obiettivo è quello di estrarre informazioni classiche da vettori di stato quantistici.
@@ -272,7 +272,7 @@ Finora, potrebbe non essere evidente perché l'informazione quantistica sia fond
 La risposta, almeno in parte, è che l'insieme di operazioni consentite che possono essere eseguite su uno stato quantistico è diverso da quello che è per l'informazione classica. Simile all'impostazione probabilistica, le operazioni sugli stati quantistici sono mappature lineari, ma piuttosto che essere rappresentate da matrici stocastiche come nel caso classico, le operazioni sui vettori di stato quantistico sono rappresentate da matrici unitarie.
 
 >Una matrice quadrata $U$ che ha numeri complessi in input è unitaria se soddisfa la seguente uguaglianza:
->$$U^\top U = I = UU^\top$$
+>$$U^\dagger U = I = UU^\dagger$$
 >dove $I$ = matrice identità.
 
 Esiste anche un modo simile per definire le matrici unitarie:
@@ -413,7 +413,7 @@ statistics = v.sample_counts(1000)
 display(statistics)
 plot_histogram(statistics)
 ```
-![[plot_simulation.png|center|500]]
+![[plot_simulation.png]]
 
 
 Le **operazioni unitarie** possono essere definite ed eseguite su vettori di stato in Qiskit utilizzando la classe `Operator`:
@@ -454,7 +454,7 @@ circuit.z(0)
 circuit.draw("mpl")
 ```
 
-![[qisit_circuit01.png| center |500]]
+![[qiskit_circuit01.png]]
 Le operazioni vengono applicate in sequenza, iniziando a sinistra e finendo a destra nella figura. Inizializziamo prima un vettore di stato quantistico iniziale e poi evolviamo quello stato in base alla sequenza di operazioni.
 
 ```python
@@ -472,7 +472,7 @@ statistics = v.sample_counts(4000)
 plot_histogram(statistics)
 ```
 
-![[plot_circuit01.png | center | 500]]
+![[plot_circuit01.png]]
 
 >I diversi gate del circuito rappresentano diverse operazioni da eseguire sullo `statevector` 'ket0'.
 >- h rappresenta l'operazione Hadamard
